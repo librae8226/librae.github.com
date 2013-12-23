@@ -47,15 +47,15 @@
 <h2 id="toc_0.1">Setup Build Environment (java)</h2>
 <p>
 if haven't installed yet,<br>
-	<code>sudo update-alternatives --install /usr/bin/java java /home/yliao/workspace/toolchains/marvell/bg2/jdk1.5.0_22/bin/java 300</code><br>
-	<code>sudo update-alternatives --install /usr/bin/javac javac /home/yliao/workspace/toolchains/marvell/bg2/jdk1.5.0_22/bin/javac 300</code><br>
+	<code>sudo update-alternatives --install /usr/bin/java java /home/yliao/.../jdk1.5.0_22/bin/java 300</code><br>
+	<code>sudo update-alternatives --install /usr/bin/javac javac /home/yliao/.../jdk1.5.0_22/bin/javac 300</code><br>
 <br>
 then, we can use these to change java version:<br>
 	<code>sudo update-alternatives --config java</code><br>
 	<code>sudo update-alternatives --config javac</code><br>
 <br>
 there will create a link like:<br>
-	<code>/usr/bin/java -&gt; /etc/alternatives/java /home/yliao/workspace/toolchains/marvell/bg2/jdk1.5.0_22/bin/java</code><br>
+	<code>/usr/bin/java -&gt; /etc/alternatives/java /home/yliao/.../jdk1.5.0_22/bin/java</code><br>
 OR<br>
 	<code>/usr/bin/java -&gt; /etc/alternatives/java/usr/lib/jvm/java-6-sun/jre/bin/java</code><br>
 </p>

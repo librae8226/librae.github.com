@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>M.V</title>
+		<title>BTStuffs</title>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<link rel="Stylesheet" type="text/css" href="../style.css" />
 		<script>var root_path = '../';</script>
@@ -33,65 +33,36 @@
 </p>
 
 <h1>index</h1>
+<div class="toc">
+<ul>
+<li><a href="#toc_0.1">Bluetooth Related Bugs</a>
+<ul>
+<li><a href="#toc_0.1.1">Settings-&gt;Bluetooth rename device does not work after power cycle</a>
+</ul>
+</ul>
+</ul>
+</div>
 
-<table>
-<tr>
-<td>
-<a href="M.VTasks.html">M.VTasks</a>
-</td>
-<td>
-Nothing much to say
-</td>
-</tr>
-<tr>
-<td>
-<a href="M.VSlubBug.html">M.VSlubBug</a>
-</td>
-<td>
-The very first thing at IES
-</td>
-</tr>
-<tr>
-<td>
-<a href="Marlin.html">Marlin</a>
-</td>
-<td>
-marlin API
-</td>
-</tr>
-<tr>
-<td>
-<a href="SystemManager.html">SystemManager</a>
-</td>
-<td>
-A small chip runs while idle
-</td>
-</tr>
-<tr>
-<td>
-<a href="Bootloader.html">Bootloader</a>
-</td>
-<td>
-u-boot &amp; bootloader
-</td>
-</tr>
-<tr>
-<td>
-<a href="M.VGeneric.html">M.VGeneric</a>
-</td>
-<td>
-general notes
-</td>
-</tr>
-<tr>
-<td>
-<a href="WiFiStuffs.html">WiFiStuffs</a>
-</td>
-<td>
-Wifi related stuffs
-</td>
-</tr>
-</table>
+<h2 id="toc_0.1">Bluetooth Related Bugs</h2>
+<hr />
+
+<h3 id="toc_0.1.1">Settings-&gt;Bluetooth rename device does not work after power cycle</h3>
+<p>
+<strong>external/bluetooth/bluedroid/btif/src/btif_core.c</strong>:<br>
+</p>
+<blockquote>
+BTIF_CORE_STORAGE_REMOTE_WRITE
+</blockquote>
+<p>
+<strong>external/bluetooth/bluedroid/btif/src/btif_storage.c</strong>:<br>
+</p>
+<blockquote>
+BT_PROPERTY_REMOTE_FRIENDLY_NAME
+</blockquote>
+
+<p>
+It does not save to config file.<br>
+</p>
 
 
 			</div>
